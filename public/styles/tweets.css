@@ -30,9 +30,6 @@ article header {
 
 article footer {
   font-size: small;
-}
-.icons {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
