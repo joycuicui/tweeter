@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 // Fake data taken from initial-tweets.json
+
 $(document).ready(function () {
   const data = [
     {
@@ -71,4 +72,33 @@ $(document).ready(function () {
   };
 
   renderTweets(data);
+
+  // $(function () {
+  //   const $button = $("#load-more-posts");
+  //   $button.on("click", function () {
+  //     console.log("Button clicked, performing ajax call...");
+  //     $.ajax("more-posts.html", { method: "GET" }).then(function (
+  //       morePostsHtml
+  //     ) {
+  //       console.log("Success: ", morePostsHtml);
+  //       $button.replaceWith(morePostsHtml);
+  //     });
+  //   });
+  // });
+
+  // event listener for submit
+  $("#tweet-form").on("submit", function (event) {
+    // prevent default form submission behavior
+    event.preventDefault();
+    // turn a set of form data into a query string
+    const data = $(this).serialize();
+    // submit a POST request that sends the serialized data to the server
+    console.log(data);
+
+    $.ajax({
+      method: "POST",
+      data: data,
+      url: "/tweets",
+    });
+  });
 });

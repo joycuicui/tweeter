@@ -4,20 +4,21 @@ article {
   margin: 50px 0 50px 0;
   transition: box-shadow 0.3s;
 }
+
 article:hover {
   box-shadow: 7px 7px 2px 1px #c9ccd5;
 }
 
-article hr {
+/* article hr {
   border: 1.8px solid #4a4c4f;
-}
+} */
 
 article header {
   display: flex;
   justify-content: space-between;
 }
 
-#profile-image {
+/* #profile-image {
   padding: 0 15px 0 5px;
 }
 
@@ -30,7 +31,7 @@ article header {
 #at-user {
   font-size: 20px;
   color: #a9a9a9;
-}
+} */
 
 article footer {
   font-size: small;
