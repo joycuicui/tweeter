@@ -7,3 +7,32 @@ article {
 article hr {
   border: 1.8px solid #4a4c4f;
 }
+
+article header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#profile-image {
+  padding: 0 15px 0 5px;
+}
+
+#user-name {
+  display: flex;
+  flex-grow: 1;
+  font-size: 22px;
+}
+
+#at-user {
+  font-size: 20px;
+  color: #a9a9a9;
+}
+
+article footer {
+  font-size: small;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
