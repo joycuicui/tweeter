@@ -1,3 +1,7 @@
+.new-tweet {
+  margin-top: 3rem;
+}
+
 form {
   background-color: #f4f1ec;
   display: flex;
@@ -19,6 +23,7 @@ form {
   flex-direction: row;
   justify-content: space-between;
   font-family: "Bungee";
+  font-size: 1.25rem;
 }
 
 .tweet-button {
@@ -28,4 +33,11 @@ form {
 
 .error {
   display: none;
+  margin-bottom: 0.5rem;
+  border: 2px solid #b31312;
+  padding: 0.2em;
+  padding-left: 0.8em;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #bb2b2a;
 }
