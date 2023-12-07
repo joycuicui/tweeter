@@ -10,9 +10,9 @@ const createTweetElement = function (data) {
 
   // header
   const $header = $("<header>");
-  const $userName = $("<span>").text(data.user.name);
-  const $avatars = $("<img>").attr("src", data.user.avatars);
-  const $handle = $("<span>").text(data.user.handle);
+  const $userName = $("<span>").text(data.user.name).attr("id", "user-name");
+  const $avatars = $("<img>").attr({ src: data.user.avatars, id: "avatar" });
+  const $handle = $("<span>").text(data.user.handle).attr("id", "handle");
   $header.append($avatars, $userName, $handle);
 
   // content
