@@ -48,7 +48,9 @@ $(document).ready(function () {
 
     //footer
     const $footer = $("<footer>");
-    const $timestamp = $("<span>").text(data.created_at);
+    // const $timestamp = $("<span>").text(data.created_at);
+    const time = timeago.format(data.created_at);
+    const $timestamp = $("<span>").text(time);
     const $icons = $("<div>").addClass("icons");
     const $flag = $("<i>").addClass("fa-solid fa-flag");
     const $retweet = $("<i>").addClass("fa-solid fa-retweet");
