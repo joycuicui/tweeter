@@ -83,11 +83,18 @@ $(document).ready(function () {
     const data = $(this).serialize();
     // submit a POST request that sends the serialized data to the server
 
-    $.ajax({
-      method: "POST",
-      data: data,
-      url: "/tweets",
-    });
+    const tweetText = $("#tweet-text").val();
+    if (!tweetText) {
+      alert("Empty tweet!");
+    } else if (tweetText.length > 140) {
+      alert("Tweet too long!");
+    } else {
+      $.ajax({
+        method: "POST",
+        data: data,
+        url: "/tweets",
+      });
+    }
   });
 
   // $(function () {
