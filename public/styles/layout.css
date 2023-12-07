@@ -33,10 +33,21 @@ main {
   background-color: #f4f1ec;
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .bold {
   font-weight: bold;
+}
+
+/*******************************************************************************/
+/** 1024px and above
+/*******************************************************************************/
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+  main {
+    justify-content: center;
+    align-items: center;
+  }
 }
