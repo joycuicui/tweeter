@@ -64,12 +64,17 @@ $(document).ready(function () {
     const tweetText = $("#tweet-text").val();
 
     if (!tweetText) {
-      alert("Empty tweet!");
+      $(".error").text("Error: Tweet Empty!").slideDown("slow");
       return;
+    } else {
+      $(".error").slideUp("slow");
     }
+
     if (tweetText.length > 140) {
-      alert("Tweet too long!");
+      $(".error").text("Error: Tweet Too Long!").slideDown("slow");
       return;
+    } else {
+      $(".error").slideUp("slow");
     }
 
     $.ajax({
