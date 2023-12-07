@@ -9,37 +9,42 @@ article:hover {
   box-shadow: 7px 7px 2px 1px #c9ccd5;
 }
 
-/* article hr {
-  border: 1.8px solid #4a4c4f;
-} */
-
 article header {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  align-items: center;
 }
 
-/* #profile-image {
-  padding: 0 15px 0 5px;
+#avatar {
+  width: 2em;
+  height: auto;
 }
 
 #user-name {
+  padding-left: 0.6em;
+  font-size: 0.9em;
   display: flex;
-  flex-grow: 1;
-  font-size: 22px;
+  justify-content: flex-start;
+  /* align-items: center; */
 }
 
-#at-user {
-  font-size: 20px;
-  color: #a9a9a9;
-} */
+#handle {
+  font-size: 0.9em;
+  color: #c9ccd5;
+  font-weight: 600;
+  margin-left: auto;
+}
 
 article footer {
-  font-size: small;
+  font-size: 0.7em;
   display: flex;
   justify-content: space-between;
+  padding-top: 0.6em;
+  border-top: 3px solid #7d7c7c;
 }
 
 .icons i {
+  margin-left: 0.5em;
   color: #4056a1;
   transition: color 0.3s;
 }
