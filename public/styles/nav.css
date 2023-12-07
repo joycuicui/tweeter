@@ -1,19 +1,22 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056a1;
+  /* background-color: #4056a1; */
+  background-color: #ffc436;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
   color: #ffffff;
   padding: 0 1.5em;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
 }
 
-nav span {
+.tweeter-logo {
   font-family: "Bungee";
+  font-size: 2.2rem;
 }
 
 .new-tweet-box {
@@ -24,5 +27,6 @@ nav span {
 }
 
 #angle-down {
-  color: #ffc436;
+  margin-top: 0.4rem;
+  color: #c63d2f;
 }
