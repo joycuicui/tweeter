@@ -59,24 +59,32 @@ $(document).ready(function () {
     event.preventDefault();
     // turn a set of form data into a query string
     const data = $(this).serialize();
-    // submit a POST request that sends the serialized data to the server
 
     const tweetText = $("#tweet-text").val();
 
     if (!tweetText) {
-      $(".error").text("Error: Tweet Empty!").slideDown("slow");
+      $(".error")
+        .text(
+          "Whoopsie! Your tweet is empty! Add some words to it! #🐦TweetFail"
+        )
+        .slideDown("slow");
       return;
     } else {
       $(".error").slideUp("slow");
     }
 
     if (tweetText.length > 140) {
-      $(".error").text("Error: Tweet Too Long!").slideDown("slow");
+      $(".error")
+        .text(
+          "Whoopsie! Your tweet is too long! Trim it down a tad! #🐦TweetFail"
+        )
+        .slideDown("slow");
       return;
     } else {
       $(".error").slideUp("slow");
     }
 
+    // submit a POST request that sends the serialized data to the server
     $.ajax({
       method: "POST",
       data: data,
@@ -84,5 +92,11 @@ $(document).ready(function () {
     }).then((response) => {
       loadTweets();
     });
+  });
+
+  // event listener for compose button
+  $("#compose-button").on("click", function () {
+    $(".new-tweet").slideToggle("slow");
+    $("#tweet-text").focus();
   });
 });
