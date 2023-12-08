@@ -50,6 +50,7 @@ form {
   .new-tweet {
     margin-top: 0;
     margin-bottom: 3rem;
+    display: flex;
   }
   form {
     margin-top: 23vh;

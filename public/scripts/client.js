@@ -96,7 +96,9 @@ $(document).ready(function () {
 
   // event listener for compose button
   $("#compose-button").on("click", function () {
-    $(".new-tweet").slideToggle("slow");
-    $("#tweet-text").focus();
+    if ($(window).width() < 1024) {
+      $(".new-tweet").slideToggle("slow");
+      $("#tweet-text").focus();
+    }
   });
 });
