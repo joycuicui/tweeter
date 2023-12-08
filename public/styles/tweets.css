@@ -14,6 +14,10 @@ article header {
   align-items: center;
 }
 
+article p {
+  color: #22201d;
+}
+
 #avatar {
   width: 2em;
   height: auto;
