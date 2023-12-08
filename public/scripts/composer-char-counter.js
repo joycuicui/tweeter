@@ -6,9 +6,9 @@ $(document).ready(function () {
     $counter.text($remainingChar);
 
     if ($remainingChar < 0) {
-      $counter.css("color", "#C63D2F");
+      $counter.addClass("red");
     } else {
-      $counter.css("color", "");
+      $counter.removeClass("red");
     }
   });
 });
