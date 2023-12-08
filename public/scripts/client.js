@@ -3,7 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// Fake data taken from initial-tweets.json
 
 const createTweetElement = function (data) {
   const $tweet = $("<article>");
@@ -22,7 +21,6 @@ const createTweetElement = function (data) {
 
   //footer
   const $footer = $("<footer>");
-  // const $timestamp = $("<span>").text(data.created_at);
   const time = timeago.format(data.created_at);
   const $timestamp = $("<span>").text(time);
   const $icons = $("<div>").addClass("icons");
