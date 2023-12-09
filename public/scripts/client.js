@@ -87,9 +87,22 @@ $(document).ready(function () {
       method: "POST",
       data: data,
       url: "/tweets",
-    }).then((response) => {
-      loadTweets();
-    });
+    })
+      .then((response) => {
+        // clear textarea
+        $("#tweet-text").val("");
+        // reset counter
+        counter();
+        loadTweets();
+      })
+      .catch((err) => {
+        // error handling with AJAX calls
+        $(".error")
+          .text(
+            "Whoopsie! Something went wrong when submitting your new tweet! #🐦TweetFail"
+          )
+          .slideDown("slow");
+      });
   });
 
   // event listener for compose button
